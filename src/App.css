@@ -36,6 +36,26 @@ html {
   text-transform: capitalize;
 }
 
+.search-wrapper{
+  clear: both;
+  min-height: 7rem;
+  position: relative;
+  display: inline-block;
+}
+
+.search-wrapper input{
+  min-width: 27rem;
+  width: 70%;
+  float: left;
+  margin-left: 1rem;
+}
+
+.search-wrapper .fa-search{
+  position: absolute;
+    right: 8px;
+    top: 32px;
+}
+
 input {
   /* display: block; */
   min-width: 40rem;
@@ -104,7 +124,7 @@ input:focus {
 }
 
 .showItems {
-  margin-top: 3rem;
+  margin-top: 2rem;
   text-align: center;
 }
 
@@ -248,3 +268,12 @@ input:focus {
   -webkit-transform: translateY(0) scale(1, 1);
   transform: translateY(0) scale(1, 1);
 }
+
+.btn-custom{
+  width: 45px;
+  height: 45px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 2rem 0 0 1rem;
+}  
+ 

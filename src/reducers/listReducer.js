@@ -1,6 +1,10 @@
+import Utils from "../utils/Utility"
+
 const initialState =  {
     list : [],
-    search_data : ''
+    search_data : '',
+    sorted_alpha : null,
+    sorted_favourate : null
 }
 
 const listReducer = (state = initialState, action) => {
@@ -54,6 +58,25 @@ const listReducer = (state = initialState, action) => {
                 ...state,
                 search_data : action.data
             }
+        
+        case 'SORT_ALPHA_ITEM' : 
+            const sorted_alpha = action?.data  === 'asc' ? state.list.sort(Utils.compareNameAsc) : state.list.sort(Utils.compareNameDesc)
+            return {
+                ...state,
+                list : sorted_alpha,
+                sorted_alpha : action.data,
+                sorted_favourate : null
+            }
+
+        case 'SORT_FAVOURATE_ITEM' : 
+            const sorted_favourate = action?.data  === 'asc' ? state.list.sort(Utils.compareFavourateAsc) : state.list.sort(Utils.compareNameDesc)
+            const sorted_favourate_state = {
+                ...state,
+                list : sorted_favourate,
+                sorted_favourate : action.data,
+                sorted_alpha : null
+            }
+            return sorted_favourate_state
 
         default : 
             return state

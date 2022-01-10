@@ -35,3 +35,17 @@ export const searchItem = (data) => {
     }
 }
 
+export const sortAlphaItem = (data) => {
+    return {
+        type : "SORT_ALPHA_ITEM",
+        data
+    }
+}
+
+export const sortFavourateItem = (data) => {
+    return {
+        type : "SORT_FAVOURATE_ITEM",
+        data
+    }
+}
+

@@ -40,8 +40,15 @@ const SearchFriend = () => {
                         />
                         <i className="fa fa-search add-btn" title="Search Item"></i>
                     </div>
-                    <button className="btn-custom" onClick={(e) => handleSortItem(e, 'alphabet')} label="sort a/b"/>
-                    <button className="btn-custom" onClick={(e) => handleSortItem(e, 'favourate')} label="sort favourate"/>
+                    <button className="btn-custom" onClick={(e) => handleSortItem(e, 'alphabet')} label="sort a/b">
+                       {
+                        sort_alpha_list && sort_alpha_list === 'desc' ?
+                        <i class="fas fa-sort-alpha-up" style={{fontSize : '24px'}}></i>
+                        :
+                        <i class="fas fa-sort-alpha-up-alt" style={{fontSize : '24px'}}></i>
+                       }
+                    </button>
+                    {/* <button className="btn-custom" onClick={(e) => handleSortItem(e, 'favourate')} label="sort favourate"/> */}
 
                 </div>
             :

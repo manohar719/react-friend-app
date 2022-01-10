@@ -13,19 +13,21 @@ const FriendList = () => {
 
     const [currentPage, setCurrentPage] = useState(1);
 
-    const currentTableData = useMemo(() => {
-      const firstPageIndex = (currentPage - 1) * PageSize;
-      const lastPageIndex = firstPageIndex + PageSize;
-      return list.slice(firstPageIndex, lastPageIndex);
-    }, [currentPage]);
+    // TODO : add pagination
+    // const currentTableData = useMemo(() => {
+    //   const firstPageIndex = (currentPage - 1) * PageSize;
+    //   const lastPageIndex = firstPageIndex + PageSize;
+    //   return list.slice(firstPageIndex, lastPageIndex);
+    // }, [currentPage]);
 
     const handleDeleteItem = (id) => {
         dispatch(deleteItem(id))
     }
 
-    const handleEditItem = (id) => {
-        dispatch(updateItem(id))
-    }
+    // TODO: add edit functionality
+    // const handleEditItem = (id) => {
+    //     dispatch(updateItem(id))
+    // }
 
     const handleAddFavourate = (id) => {
         dispatch(addRemoveFavourate(id))

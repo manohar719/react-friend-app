@@ -3,6 +3,7 @@ import AddFriend from '../AddFriend';
 import Welcome from '../Welcome';
 import FriendList from '../FriendList';
 import SearchFriend from '../SearchFriend';
+import "../../App.css"
 
 const Layout = () => {
     return (

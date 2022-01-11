@@ -42,7 +42,8 @@ const FriendList = ({showToast}) => {
     return (
         <div className="showItems">
             {
-                list.sort(sort_by_alphabet && sort_by_alphabet === 'asc' ? Utils.compareNameAsc : Utils.compareNameDesc)
+                list
+                // .sort(sort_by_alphabet && sort_by_alphabet === 'asc' ? Utils.compareNameAsc : Utils.compareNameDesc)
                 // .sort(sort_by_favourate && sort_by_favourate === 'asc' ? Utils.compareFavourateAsc : Utils.compareFavourateDesc)
                 .filter(item => item.name.toLowerCase().includes(search_filter.toLowerCase())).map((elem) => {
                     return (
